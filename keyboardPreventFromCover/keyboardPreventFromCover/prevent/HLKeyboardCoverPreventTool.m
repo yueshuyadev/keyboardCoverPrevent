@@ -14,7 +14,10 @@
  */
 static const CGFloat kKeyboardCoverViewM = 0.f;
 
-@interface HLKeyboardCoverPreventTool()
+@interface HLKeyboardCoverPreventTool(){
+    @private
+    CGRect _keyboardFrame;
+}
 
 
 @property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
@@ -35,11 +38,12 @@ single_implementation(HLKeyboardCoverPreventTool)
 - (void)lk_keyboardWillAppear:(NSNotification *)notice{
     //获取键盘的frame
     CGRect keyboardFrame = [notice.userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
-    [self preventCoverWithKeyboardFrame:keyboardFrame];
+    [self _preventCoverWithKeyboardFrame:keyboardFrame];
+    _keyboardFrame = keyboardFrame;
 }
 
 #pragma mark 阻止遮挡
-- (void)preventCoverWithKeyboardFrame:(CGRect)keyboardFrame{
+- (void)_preventCoverWithKeyboardFrame:(CGRect)keyboardFrame{
     if (!_curTextField) {
         return;
     }
@@ -63,6 +67,7 @@ single_implementation(HLKeyboardCoverPreventTool)
 
 #pragma mark 键盘将要隐藏
 - (void)lk_keyboardWillDisappear:(NSNotification *)notice{
+    _keyboardFrame = CGRectZero;
     [self _resumeCover];
 }
 
@@ -71,6 +76,10 @@ single_implementation(HLKeyboardCoverPreventTool)
     if (!_curTextField) {
         return;
     }
+    [self _resumeOperation];
+}
+
+- (void)_resumeOperation{
     UIViewController *vc = _curTextField.curVc;
     if (!vc) {
         _curTextField = nil;
@@ -91,17 +100,21 @@ single_implementation(HLKeyboardCoverPreventTool)
     }
     if (_curTextField) {
         //原来有，则注销原来的
-        UIViewController *vc = _curTextField.curVc;
-        if (vc) {
-            [self _removeGestureFromView:vc.view];
+        if (_curTextField.curVc != curTextField.curVc) {
+            [self _resumeOperation];
         }
     }
     UIViewController *vc = curTextField.curVc;
-    _preFrame = vc.view.frame;
+    if (vc != _curTextField.curVc) {
+        _preFrame = vc.view.frame;
+    }
     if (vc) {
         [self _addGesturesToView:vc.view];
     }
     _curTextField = curTextField;
+    if (!CGRectIsEmpty(_keyboardFrame)) {
+        [self _preventCoverWithKeyboardFrame:_keyboardFrame];
+    }
 }
 
 
@@ -146,7 +159,7 @@ single_implementation(HLKeyboardCoverPreventTool)
 
 
 #pragma mark 结束文本框的编辑
-- (void)endTextFieldEditing{
+- (void)_endTextFieldEditing{
     [_curTextField resignFirstResponder];
 }
 
@@ -160,17 +173,6 @@ single_implementation(HLKeyboardCoverPreventTool)
 + (void)load{
     HLKeyboardCoverPreventTool *instance = [HLKeyboardCoverPreventTool shareHLKeyboardCoverPreventTool];
     [instance class];
-}
-
-@end
-
-
-@implementation __HLKBPMask
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    if (_task) {
-        _task();
-    }
 }
 
 @end

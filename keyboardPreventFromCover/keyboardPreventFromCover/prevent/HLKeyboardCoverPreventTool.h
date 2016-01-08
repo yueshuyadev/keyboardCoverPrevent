@@ -24,11 +24,3 @@ single_interface(HLKeyboardCoverPreventTool)
 
 
 @end
-
-typedef void (^__HLKBPMaskTouchTask)();
-
-@interface __HLKBPMask : UIView
-
-@property(nonatomic, copy) __HLKBPMaskTouchTask task;
-
-@end

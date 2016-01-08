@@ -28,12 +28,30 @@
     
     UITextField *inputView = [[UITextField alloc] init];
     
-    inputView.frame = CGRectMake(10, height - 50 - 10.f, 200, 50);
+    inputView.frame = CGRectMake(10, height - 50 - 25.f, 200, 50);
     inputView.placeholder = @"编辑，防遮挡";
     [self.view addSubview:inputView];
     inputView.borderStyle = UITextBorderStyleRoundedRect;
     inputView.returnKeyType = UIReturnKeyDone;
     inputView.delegate = self;
+    
+    UITextField *inputView2 = [[UITextField alloc] init];
+    
+    inputView2.frame = CGRectMake(230, height - 50 - 10.f, 200, 50);
+    inputView2.placeholder = @"编辑，防遮挡";
+    [self.view addSubview:inputView2];
+    inputView2.borderStyle = UITextBorderStyleRoundedRect;
+    inputView2.returnKeyType = UIReturnKeyDone;
+    inputView2.delegate = self;
+    
+    UITextField *inputView3 = [[UITextField alloc] init];
+    
+    inputView3.frame = CGRectMake(10, height - 50 - 280, 200, 50);
+    inputView3.placeholder = @"编辑，防遮挡";
+    [self.view addSubview:inputView3];
+    inputView3.borderStyle = UITextBorderStyleRoundedRect;
+    inputView3.returnKeyType = UIReturnKeyDone;
+    inputView3.delegate = self;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
