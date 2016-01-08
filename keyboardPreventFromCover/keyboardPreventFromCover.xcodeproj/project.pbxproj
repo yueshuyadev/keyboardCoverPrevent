@@ -15,9 +15,9 @@
 		2155EAAF1C36E26D007D669C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2155EAAD1C36E26D007D669C /* LaunchScreen.storyboard */; };
 		2155EABA1C36E26D007D669C /* keyboardPreventFromCoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155EAB91C36E26D007D669C /* keyboardPreventFromCoverTests.m */; };
 		2155EAC51C36E26D007D669C /* keyboardPreventFromCoverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155EAC41C36E26D007D669C /* keyboardPreventFromCoverUITests.m */; };
-		2155EAD61C36E4E5007D669C /* UITextField+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155EAD21C36E4E5007D669C /* UITextField+HL.m */; };
-		2155EAD91C36E521007D669C /* HLKeyboardCoverPreventTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155EAD81C36E521007D669C /* HLKeyboardCoverPreventTool.m */; };
-		2155EADE1C36E5F3007D669C /* UIView+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155EADD1C36E5F3007D669C /* UIView+LK.m */; };
+		21D481D11C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D481CB1C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.m */; };
+		21D481D21C3F6C3300AA6EF2 /* UITextField+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D481CE1C3F6C3300AA6EF2 /* UITextField+HL.m */; };
+		21D481D31C3F6C3300AA6EF2 /* UIView+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D481D01C3F6C3300AA6EF2 /* UIView+LK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +54,13 @@
 		2155EAC01C36E26D007D669C /* keyboardPreventFromCoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keyboardPreventFromCoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2155EAC41C36E26D007D669C /* keyboardPreventFromCoverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = keyboardPreventFromCoverUITests.m; sourceTree = "<group>"; };
 		2155EAC61C36E26D007D669C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2155EAD21C36E4E5007D669C /* UITextField+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HL.m"; sourceTree = "<group>"; };
-		2155EAD31C36E4E5007D669C /* UITextField+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HL.h"; sourceTree = "<group>"; };
-		2155EAD51C36E4E5007D669C /* HLKeyboardCoverPreventTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLKeyboardCoverPreventTool.h; sourceTree = "<group>"; };
-		2155EAD81C36E521007D669C /* HLKeyboardCoverPreventTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLKeyboardCoverPreventTool.m; sourceTree = "<group>"; };
-		2155EADB1C36E570007D669C /* singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
-		2155EADC1C36E5F3007D669C /* UIView+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LK.h"; sourceTree = "<group>"; };
-		2155EADD1C36E5F3007D669C /* UIView+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LK.m"; sourceTree = "<group>"; };
+		21D481CA1C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLKeyboardCoverPreventTool.h; sourceTree = "<group>"; };
+		21D481CB1C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLKeyboardCoverPreventTool.m; sourceTree = "<group>"; };
+		21D481CC1C3F6C3300AA6EF2 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
+		21D481CD1C3F6C3300AA6EF2 /* UITextField+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HL.h"; sourceTree = "<group>"; };
+		21D481CE1C3F6C3300AA6EF2 /* UITextField+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HL.m"; sourceTree = "<group>"; };
+		21D481CF1C3F6C3300AA6EF2 /* UIView+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LK.h"; sourceTree = "<group>"; };
+		21D481D01C3F6C3300AA6EF2 /* UIView+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LK.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		2155EA9E1C36E26D007D669C /* keyboardPreventFromCover */ = {
 			isa = PBXGroup;
 			children = (
-				2155EADA1C36E53D007D669C /* prevent */,
+				21D481C91C3F6C3300AA6EF2 /* prevent */,
 				2155EAA21C36E26D007D669C /* AppDelegate.h */,
 				2155EAA31C36E26D007D669C /* AppDelegate.m */,
 				2155EAA51C36E26D007D669C /* ViewController.h */,
@@ -151,18 +151,18 @@
 			path = keyboardPreventFromCoverUITests;
 			sourceTree = "<group>";
 		};
-		2155EADA1C36E53D007D669C /* prevent */ = {
+		21D481C91C3F6C3300AA6EF2 /* prevent */ = {
 			isa = PBXGroup;
 			children = (
-				2155EADB1C36E570007D669C /* singleton.h */,
-				2155EADC1C36E5F3007D669C /* UIView+LK.h */,
-				2155EADD1C36E5F3007D669C /* UIView+LK.m */,
-				2155EAD21C36E4E5007D669C /* UITextField+HL.m */,
-				2155EAD31C36E4E5007D669C /* UITextField+HL.h */,
-				2155EAD51C36E4E5007D669C /* HLKeyboardCoverPreventTool.h */,
-				2155EAD81C36E521007D669C /* HLKeyboardCoverPreventTool.m */,
+				21D481CA1C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.h */,
+				21D481CB1C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.m */,
+				21D481CC1C3F6C3300AA6EF2 /* singleton.h */,
+				21D481CD1C3F6C3300AA6EF2 /* UITextField+HL.h */,
+				21D481CE1C3F6C3300AA6EF2 /* UITextField+HL.m */,
+				21D481CF1C3F6C3300AA6EF2 /* UIView+LK.h */,
+				21D481D01C3F6C3300AA6EF2 /* UIView+LK.m */,
 			);
-			name = prevent;
+			path = prevent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2155EAA71C36E26D007D669C /* ViewController.m in Sources */,
-				2155EADE1C36E5F3007D669C /* UIView+LK.m in Sources */,
-				2155EAD91C36E521007D669C /* HLKeyboardCoverPreventTool.m in Sources */,
-				2155EAD61C36E4E5007D669C /* UITextField+HL.m in Sources */,
+				21D481D31C3F6C3300AA6EF2 /* UIView+LK.m in Sources */,
+				21D481D11C3F6C3300AA6EF2 /* HLKeyboardCoverPreventTool.m in Sources */,
 				2155EAA41C36E26D007D669C /* AppDelegate.m in Sources */,
+				21D481D21C3F6C3300AA6EF2 /* UITextField+HL.m in Sources */,
 				2155EAA11C36E26D007D669C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +528,7 @@
 				2155EACB1C36E26D007D669C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2155EACC1C36E26D007D669C /* Build configuration list for PBXNativeTarget "keyboardPreventFromCoverTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +537,7 @@
 				2155EACE1C36E26D007D669C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2155EACF1C36E26D007D669C /* Build configuration list for PBXNativeTarget "keyboardPreventFromCoverUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +546,7 @@
 				2155EAD11C36E26D007D669C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
